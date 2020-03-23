@@ -52,15 +52,46 @@ When all conditions of the acceptance criterea is complete
 - As a User I can create a Plane with a plane number:tick:
 
 ### Flight trip
-
-
 - As a user I can create a flight with no specific information:tick:
 - as a user I can add a plane
 - as a User I can add a destination
 - As a user I can add a origin
 - As a user I can add a Passanger to the list of passangers in the flight trip
-- Passanger list is a list of objct that are Passangers
-
-## Installing
+- Passanger list is a list of object that are Passangers
 
 ## Main methods
+```python
+class Aircraft():
+    def __init__(self, cargo = 200):
+        self.cargo = cargo
+
+class FlightTrip():
+    def __init__(self, origin = '', destination = '', plane_list = []):
+        self.origin = origin
+        self.destination = destination
+        self.plane_number = plane_list
+
+class People():
+    def __init__(self, name):
+        self.name = name
+
+class Passenger(People):
+    def __init__(self, name, passport_number):
+        super().__init__(name)
+        self.passport_number = passport_number
+
+```
+
+## Child methods
+```python
+class Passenger(People):
+    def __init__(self, name, passport_number):
+        super().__init__(name)
+        self.passport_number = passport_number
+
+class Plane(Aircraft):
+    def __init__(self, plane_number, cargo):
+        super().__init__(cargo)
+        self.plane_number = plane_number
+
+```
