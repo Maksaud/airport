@@ -95,3 +95,9 @@ class Plane(Aircraft):
         self.plane_number = plane_number
 
 ```
+# Clone
+
+git clone https://github.com/Maksaud/airport.git
+
+# To run
+python3 run_airport.py
